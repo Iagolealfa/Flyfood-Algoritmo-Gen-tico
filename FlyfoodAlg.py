@@ -1,7 +1,6 @@
 
 import random
-import matplotlib.pyplot as plt
-import time
+
 
 def dist_dos_pontos(ponto_a, ponto_b):
   return (abs(ponto_a[0]-ponto_b[0]) + abs(ponto_a[1]-ponto_b[1]))
@@ -120,16 +119,11 @@ def main():
         desenvolvimento.append(result_ordenados_por_aptidao[0][1])
         if(result_ordenados_por_aptidao[0][1]<melhor_individuo[1]):
             melhor_individuo=result_ordenados_por_aptidao[0]
-    fim = time.time()    
-    print("tempo", fim - inicio)  
+    
 
     print("Menor distância encontrada:", melhor_individuo[1])
     print("Menor caminho: R ->", (" -> ").join(melhor_individuo[0]), "-> R")
-    plt.figure(figsize=(8, 6), dpi=80)
-    plt.plot(desenvolvimento)
-    plt.ylabel('Distância')
-    plt.xlabel('Geração')
-    plt.show()
+    
    
 
 
