@@ -130,7 +130,7 @@ def main():
     plt.ylabel('Distância')
     plt.xlabel('Geração')
     plt.show()
-    return melhor_individuo
+   
 
 
 
